@@ -1,7 +1,23 @@
-#para {
+#parent {
   padding: 2rem;
   background-color: darkblue;
+}
+
+#child1 {
+  padding: 1rem;
+  background-color: dodgerblue;
   color: paleturquoise;
   font-weight: bold;
   font-size: 1.4rem;
+}
+
+#child2 {
+  padding: 3rem;
+  background-color: olivedrab;
+  color: yellow;
+  font-size: 2rem;
+}
+
+#parent h2 {
+  color: seashell;
 }
