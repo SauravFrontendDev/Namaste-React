@@ -1,0 +1,17 @@
+{
+  "name": "02-igniting-our-app",
+  "version": "1.0.0",
+  "description": "Learning about Igniting our App through Namaste React",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Saurav kumar verma",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  }
+}
