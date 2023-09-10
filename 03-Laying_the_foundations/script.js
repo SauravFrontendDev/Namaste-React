@@ -1,23 +1,33 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
+const heading = <h1>This is My SImple Heading JSX</h1>;
 
-const para = React.createElement(
-  "p",
-  { id: "parent", style: { color: "white" } },
-  "This is a React Paragraph element."
+const HeadingComponent = () => (
+  <div id="child1">
+    <h1>This is My Primary Heading Component</h1>
+  </div>
 );
 
-console.log(para);
-// JSX Syntax
+const ContainerContainer = () => (
+  <div id="parent">
+    {heading}
+    <HeadingComponent />
 
-const jsxHeading = (
-  <h1 id="parent" style={{ color: "skyblue" }}>
-    {" "}
-    Heading Created using JSX
-  </h1>
+    <div id="child2">
+      <h2>This is second Heading</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nulla
+        eaque doloribus doloremque temporibus nihil nemo! Quaerat consequatur
+        veritatis cumque quasi doloribus dolorum totam quia, vel maxime nemo
+        harum incidunt.
+      </p>
+    </div>
+  </div>
 );
-console.log(jsxHeading);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(<ContainerContainer />);
+
+// React Components
+// Class based Components , Functional Components
