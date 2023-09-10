@@ -26,4 +26,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   ** - Address
   ** - Contact
 
+
+
+
+  // Restraunt Card Component
+
+  *** -- RestaurantCard
+   -- Img
+   -- Name of Rest
+   -- Star Rating
+   -- Cuisine
+   -- Delivery Time
 */

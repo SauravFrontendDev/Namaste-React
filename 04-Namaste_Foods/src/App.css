@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #666;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.logo {
+  width: 100px;
+}
+.nav__list {
+  display: flex;
+  gap: 2rem;
+}
+
+.body__container {
+  background-color: #f4f8a24d;
+}
+.search {
+  padding: 1rem;
+}
+.rest__container {
+  gap: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+}
+.rest__card {
+  padding: 1rem;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  background-color: #f4f8a2bd;
+  border: 2px solid transparent;
+  transition: all 0.5s ease;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+.rest__card:is(:hover, :focus-visible) {
+  border-color: #6d6f4750;
+  box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.24);
+}
+.rest__img {
+  height: 10rem;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
