@@ -2,6 +2,7 @@ import { CDN_URL } from "../utils/constants";
 
 const RestaurantCard = ({ resData }) => {
   // console.log(resData.sla);
+
   if (!resData) return;
   else
     return (
