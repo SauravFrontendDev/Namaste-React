@@ -1,4 +1,5 @@
 import "./App.css";
+import restaurant from "./data";
 
 const Header = () => {
   return (
@@ -22,18 +23,21 @@ const Header = () => {
   );
 };
 
-const RestaurantCard = () => {
+const RestaurantCard = ({ resData }) => {
+  const IMGURL =
+    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
+  console.log(resData.sla);
   return (
     <div className="rest__card">
       <img
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/sludnbblldmevxug95kt"
-        alt="Biryani Blues Card"
+        src={`${IMGURL}${resData.cloudinaryImageId}`}
+        alt={resData.name}
         className="rest__img"
       />
-      <h3>Biryani Blues</h3>
-      <h4>Biryani, Hyderabadi</h4>
-      <h4>4.3 stars</h4>
-      <h4>38 minutes</h4>
+      <h3>{resData.name}</h3>
+      <h4>{resData.cuisines}</h4>
+      <h4>{resData.avgRating} stars</h4>
+      <h4>{resData.sla?.deliveryTime} minutes</h4>
     </div>
   );
 };
@@ -43,24 +47,16 @@ const Body = () => {
     <main className="body__container">
       <h5 className="search">SEARCH</h5>
       <div className="rest__container">
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
-        <RestaurantCard />
+        {restaurant.map((rest) => (
+          <RestaurantCard resData={rest.info} key={rest.info.id} />
+        ))}
       </div>
     </main>
   );
 };
 
 const App = () => {
+  console.log(restaurant[0]);
   return (
     <div className="app">
       <Header />
