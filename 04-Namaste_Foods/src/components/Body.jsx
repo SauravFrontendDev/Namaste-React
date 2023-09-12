@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import restaurant from "../utils/mockdata";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Body = () => {
   const [listOfRest, setListOfRest] = useState(restaurant);
 
@@ -11,6 +11,13 @@ const Body = () => {
     setListOfRest((list) => filteredRestaurant);
   };
 
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  const fetchData = async () => {
+    const data = await fetch();
+  };
   return (
     <main className="body__container">
       <div className="filter">
